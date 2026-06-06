@@ -23,12 +23,21 @@ public final class DatabaseConnection {
     private static final String USER = "root";
     private static final String PASSWORD = "";
 
-    private static final String URL =
-            "jdbc:mysql://" + HOST + ":" + PORT + "/" + DATABASE
-                    + "?useSSL=false&allowPublicKeyRetrieval=true"
+    private static final String PARAMS =
+            "?useSSL=false&allowPublicKeyRetrieval=true"
                     + "&serverTimezone=Europe/Warsaw&characterEncoding=UTF-8";
 
+    private static final String URL =
+            "jdbc:mysql://" + HOST + ":" + PORT + "/" + DATABASE + PARAMS;
+
+    private static final String SERVER_URL =
+            "jdbc:mysql://" + HOST + ":" + PORT + "/" + PARAMS;
+
     private DatabaseConnection() {
+    }
+
+    public static String getDatabaseName() {
+        return DATABASE;
     }
 
     /*
@@ -38,5 +47,14 @@ public final class DatabaseConnection {
      */
     public static Connection getConnection() throws SQLException {
         return DriverManager.getConnection(URL, USER, PASSWORD);
+    }
+
+    /*
+     * Tworzy połączenie z serwerem MySQL bez wskazywania konkretnej bazy danych.
+     * Wykorzystywane przy automatycznej inicjalizacji, gdy baza może jeszcze
+     * nie istnieć (np. do wykonania polecenia CREATE DATABASE).
+     */
+    public static Connection getServerConnection() throws SQLException {
+        return DriverManager.getConnection(SERVER_URL, USER, PASSWORD);
     }
 }

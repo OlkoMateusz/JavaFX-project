@@ -15,6 +15,7 @@ C:\Users\mateu\Desktop\JavaFX-project\src\main\java\com\simplebank\dao\LoanDAO.j
 C:\Users\mateu\Desktop\JavaFX-project\src\main\java\com\simplebank\dao\TransactionDAO.java
 C:\Users\mateu\Desktop\JavaFX-project\src\main\java\com\simplebank\dao\TransactionTypeDAO.java
 C:\Users\mateu\Desktop\JavaFX-project\src\main\java\com\simplebank\dao\UserDAO.java
+C:\Users\mateu\Desktop\JavaFX-project\src\main\java\com\simplebank\Launcher.java
 C:\Users\mateu\Desktop\JavaFX-project\src\main\java\com\simplebank\model\AccountType.java
 C:\Users\mateu\Desktop\JavaFX-project\src\main\java\com\simplebank\model\BankAccount.java
 C:\Users\mateu\Desktop\JavaFX-project\src\main\java\com\simplebank\model\Card.java
@@ -30,6 +31,7 @@ C:\Users\mateu\Desktop\JavaFX-project\src\main\java\com\simplebank\service\LoanS
 C:\Users\mateu\Desktop\JavaFX-project\src\main\java\com\simplebank\service\UserService.java
 C:\Users\mateu\Desktop\JavaFX-project\src\main\java\com\simplebank\util\AlertUtil.java
 C:\Users\mateu\Desktop\JavaFX-project\src\main\java\com\simplebank\util\DatabaseConnection.java
+C:\Users\mateu\Desktop\JavaFX-project\src\main\java\com\simplebank\util\DatabaseInitializer.java
 C:\Users\mateu\Desktop\JavaFX-project\src\main\java\com\simplebank\util\PasswordUtil.java
 C:\Users\mateu\Desktop\JavaFX-project\src\main\java\com\simplebank\util\SceneManager.java
 C:\Users\mateu\Desktop\JavaFX-project\src\main\java\com\simplebank\util\SessionManager.java
