@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.simplebank.controller.CardsController"
+      spacing="14.0">
+    <padding><Insets top="18.0" right="20.0" bottom="18.0" left="20.0"/></padding>
+
+    <Label text="Karty płatnicze" styleClass="section-title"/>
+
+    <HBox spacing="10.0" alignment="CENTER_LEFT">
+        <Label text="Konto:" styleClass="field-label"/>
+        <ComboBox fx:id="accountCombo" prefWidth="320.0"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button text="Wygeneruj nową kartę" onAction="#handleGenerateCard" styleClass="btn-primary"/>
+    </HBox>
+
+    <TableView fx:id="cardsTable" prefHeight="380.0" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colNrKarty" text="Numer karty" prefWidth="220.0"/>
+            <TableColumn fx:id="colCvv" text="CVV" prefWidth="80.0"/>
+            <TableColumn fx:id="colWaznosc" text="Ważna do" prefWidth="120.0"/>
+            <TableColumn fx:id="colStatus" text="Status" prefWidth="110.0"/>
+            <TableColumn fx:id="colKonto" text="Konto" prefWidth="300.0"/>
+        </columns>
+    </TableView>
+</VBox>

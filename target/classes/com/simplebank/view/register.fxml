@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.simplebank.controller.RegisterController"
+           prefWidth="460.0" prefHeight="620.0" styleClass="auth-background">
+
+    <VBox alignment="CENTER" spacing="10.0" maxWidth="360.0" styleClass="auth-card">
+        <Label text="🏦 Simple Bank" styleClass="app-logo"/>
+        <Label text="Rejestracja nowego użytkownika" styleClass="subtitle"/>
+
+        <Label text="Imię" styleClass="field-label"/>
+        <TextField fx:id="imieField" promptText="Imię"/>
+
+        <Label text="Nazwisko" styleClass="field-label"/>
+        <TextField fx:id="nazwiskoField" promptText="Nazwisko"/>
+
+        <Label text="PESEL" styleClass="field-label"/>
+        <TextField fx:id="peselField" promptText="11 cyfr"/>
+
+        <Label text="Adres e-mail" styleClass="field-label"/>
+        <TextField fx:id="emailField" promptText="adres@example.com"/>
+
+        <Label text="Hasło" styleClass="field-label"/>
+        <PasswordField fx:id="hasloField" promptText="Hasło"/>
+
+        <Label text="Powtórz hasło" styleClass="field-label"/>
+        <PasswordField fx:id="powtorzHasloField" promptText="Powtórz hasło"/>
+
+        <Button text="Zarejestruj się" onAction="#handleRegister" maxWidth="Infinity" styleClass="btn-primary"/>
+        <Button text="Wróć do logowania" onAction="#handleBackToLogin" maxWidth="Infinity" styleClass="btn-link"/>
+    </VBox>
+</StackPane>
